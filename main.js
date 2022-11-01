@@ -1,40 +1,40 @@
 addEventListener("DOMContentLoaded", (e)=>{
-    let pag = document.querySelector('#pago')
-    let hora = document.querySelector("#myForm");
-    let ventane = document.querySelector("dialog");
-    let Close = document.querySelector("#close");
-    let cont = 0
+
+let n = document.querySelector("#N")
+let resultado = ""
+let numeros = document.querySelector("#Numeros")
+let suma = 0
+let res = document.querySelector("#resultados")
 
 
-    
-    hora.addEventListener("submit", (e)=>{
-        e.preventDefault();
-        let dataInput = Object.fromEntries(new FormData(e.target));
-        let preciohora = 5208.33
-        let mihora = dataInput.hora
-        mihora*=preciohora
-        tot = Math.round(mihora)
-        pag.innerHTML = mihora
+numeros.addEventListener("submit", (e)=>{
+    e.preventDefault();
 
-        ventane.showModal();
-        if(cont < 50) {
-            let mytabla = document.querySelector('tbody');
-            mytabla.insertAdjacentHTML('beforeend',`
-            <tr>
-                <td>${dataInput.nombre}</td>
-                <td>${dataInput.hora}</td>
-                <td>${tot}</td>
-                <td>${tot*30}</td>
-            </tr>
-            `)
-            cont++;
+    let datosEntrada = Object.fromEntries(new FormData(e.target));
+
+    for (let s = 1; s < datosEntrada.N; s++){
+
+        if(datosEntrada.N % s == 0){
+            suma+=s
         }
-    })
+    }
 
-    Close.addEventListener("click", (e)=>{
-        ventane.close();
-    })
+    if(datosEntrada.N == suma){
+        resultado = "Es perfecto"
+        suma = 0
+    }
 
+    else{
+        resultado = "No es perfecto"
+        suma = 0
+    }
+
+    res.innerHTML = ""
+    res.insertAdjacentHTML("beforeend",`
+        <h2> ${datosEntrada.N + ' ' + resultado} </h2>
+    `);
+
+    })
 
 
 })
