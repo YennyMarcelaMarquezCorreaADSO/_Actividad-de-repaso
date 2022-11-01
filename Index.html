@@ -9,19 +9,46 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <h1> Ejercicio 3</h1>
-    <h3> Dados dos números enteros positivos N y D, se dice que D es un divisor de N si el resto de dividir N entre D es 0. Se dice que un número N es perfecto si la suma de sus divisores (excluido el propio N) es N. Por ejemplo 28 es perfecto, pues sus divisores (excluido elv28) son: 1, 2, 4, 7 y 14 y su suma es 1+2+4+7+14=28. Hacer un organigrama que dado un número N nos diga si es o no perfecto.</h3>
+    <h1> Ejercicio 4 </h1>
+    <h3>Una compañía de seguros tiene contratados a N vendedores. Cada uno hace tres ventas a la semana. Su política de pagos es que un vendedor recibe un sueldo base, y un 10% extra por comisiones de sus ventas. El gerente de su compañía desea saber cuánto dinero obtendrá en la semana cada vendedor por concepto de comisiones por las tres ventas realizadas, y cuanto tomando en cuenta su sueldo base y sus comisiones.</h3>
 
-    <form id="Numeros" method="get">
-
-        <input type="number" name="N" id="n">
+    <form id="ventas" method="get">
+        <label>Venta 1
+            <input type="number" name="venta1" placeholder="Precio venta 1" >
+        </label>
+        <br>
+        <br>
+        <label>Venta 2
+            <input type="number" name="venta2" placeholder="Precio venta 2">
+        </label>
+        <br>
+        <br>
+        <label>Venta 3
+            <input type="text" name="venta3" placeholder="Precio venta 3">
+        </label>
         <input type="submit" value="Enviar">
-
     </form>
 
-    <div id="resultados">
+    <dialog>
+        <button id="close">X</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Precio Venta 1</th>
+                    <th>Precio venta 2</th>
+                    <th>Precio venta 3</th>
+                    <th>Sueldo base </th>
+                    <th>Sueldo con comisión</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
 
-    </div>
+    </dialog>
+    
+    <h1><span id="resultado"></span></h1>
+ 
+
 
 </body>
 </html>

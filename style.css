@@ -1,21 +1,23 @@
 
 body{
-    background-color: beige;
+    background-color: rgb(215, 173, 255);
+    color: blueviolet;
 }
 
-input[type="text"]{
-    display: block;
-}
 
 input[type="submit"]{
     display: block;
     margin-top: 10px;
+    color: white;
+    border: 2px solid white;
+    background-color: rgb(197, 149, 241);
+    box-shadow: 2px 2px 2px black;
 }
 
 table thead tr{
     background: rgb(172, 104, 172);
     color: purple;
-    font-family: Georgia;
+    font-family: Georgia;;
 }
 
 table thead tr th{
