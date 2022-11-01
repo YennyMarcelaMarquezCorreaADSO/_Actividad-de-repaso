@@ -2,10 +2,39 @@
 body{
     background-color: beige;
 }
+
 input[type="text"]{
     display: block;
 }
+
 input[type="submit"]{
     display: block;
     margin-top: 10px;
+}
+
+table thead tr{
+    background: rgb(172, 104, 172);
+    color: purple;
+    font-family: Georgia;
+}
+
+table thead tr th{
+    padding: 10px;
+}
+
+table tbody tr{
+    text-align: center;
+    font-family: Georgia;
+}
+table tbody tr:nth-child(2n+1){
+    background: plum;
+}
+table tbody tr:nth-child(2n){
+    background: rgb(185, 146, 185);
+}
+button{
+    display: inline-block;
+    margin-right: auto;
+    margin-left: 501px;
+    margin-bottom: 10px;
 }

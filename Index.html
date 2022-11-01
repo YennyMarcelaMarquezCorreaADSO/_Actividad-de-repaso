@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sp">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,15 +13,35 @@
     <h3>Desarrolle un algoritmo para la empresa Constructora Tecnovivir Casas C.A., que le permita calcular e" imprimir la nómina para su cancelación a un total de 50 obreros calificados a quienes debe cancelar por horas trabajadas. La hora trabajada se pautó en 5,208.33 Pesos</h3>
 
     <form id="myForm" method="get">
-        <label> Número de trabajadores: 50 </label>
-        <br>
+        <label> Nombre</label>
+        <input type="text" name="nombre" placeholder="Ingrese su nombre">
         <br>
         <label> Hora </label>
         <br>
-        <input type="number" name="hora" placeholder="Ingrese n° de horas trabajadas">
+        <input type="number" name="hora" placeholder="N° de horas trabajadas">
         <input type="submit" value="Enviar">
     </form>
-    <h1> El salario es de: <span id="pago"></span></h1>
+
+    <dialog>
+
+        <button id="close">X</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Horas trabajadas</th>
+                    <th>Pago diario</th>
+                    <th>Salario Mensual</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+    </dialog>
+
+    <h1><span id="pago"></span></h1>
+
+
 
 </body>
 </html>
