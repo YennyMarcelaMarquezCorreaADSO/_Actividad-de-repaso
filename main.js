@@ -13,9 +13,9 @@ let sueldoBase = 475800
 ventas.addEventListener("submit", (e)=>{
     e.preventDefault();
     let dataInput = Object.fromEntries(new FormData(e.target))
-    let comision1 = Number(dataInput.vent1)*0.10
-    let comision2 = Number(dataInput.vent2)*0.10
-    let comision3 = Number(dataInput.vent3)*0.10
+    let comision1 = Number(dataInput.venta1)*0.10
+    let comision2 = Number(dataInput.venta2)*0.10
+    let comision3 = Number(dataInput.venta3)*0.10
     let comision = comision1 + comision2 + comision3
     let totalcomision = sueldoBase + comision
     res.innerHTML = totalcomision
